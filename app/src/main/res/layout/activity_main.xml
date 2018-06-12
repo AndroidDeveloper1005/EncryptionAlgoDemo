@@ -7,88 +7,45 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <EditText
+            style="@style/TextWidgetTheme"
             android:id="@+id/etInputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/edittext"
-            android:fontFamily="serif"
-            android:hint="Enter Input"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_marginTop="@dimen/margin_40dp"
+            android:hint="Enter Input" />
 
         <LinearLayout
+            style="@style/ChildContainerTheme"
             android:id="@+id/llButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/etInputText"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
             android:weightSum="2">
 
             <Button
+                style="@style/CustomButtonTheme"
                 android:id="@+id/btnEncode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="@dimen/padding_10dp"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
                 android:text="Encode"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                />
 
             <Button
+                style="@style/CustomButtonTheme"
                 android:id="@+id/btnDecode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="Decode"
-                android:textSize="18sp"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
+                android:text="Decode" />
 
         </LinearLayout>
 
         <TextView
+            style="@style/TextWidgetTheme"
             android:id="@+id/tvAesEncodedOutput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/llButton"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/edittext"
-            android:fontFamily="serif-monospace"
-            android:hint="Encoded Output Response"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_marginTop="@dimen/padding_30dp"
+            android:hint="Encoded Output Response" />
 
         <TextView
+            style="@style/TextWidgetTheme"
             android:id="@+id/tvAesDecodedOutput"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/tvAesEncodedOutput"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:fontFamily="serif-monospace"
-            android:hint="Decoded Data"
-            android:padding="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:hint="Decoded Data" />
 
     </RelativeLayout>
