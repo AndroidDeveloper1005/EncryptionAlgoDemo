@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout android:layout_width="match_parent"
+<ScrollView
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground1"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground1"
+        android:orientation="vertical">
 
         <EditText
             style="@style/TextWidgetTheme"
@@ -48,4 +53,25 @@
             android:layout_marginTop="@dimen/padding_10dp"
             android:hint="Decoded Data" />
 
+        <Button
+            style="@style/CustomNavigationButton"
+            android:id="@+id/btnNavAES"
+            android:layout_width="150dp"
+            android:text="AES"
+            android:drawableLeft="@drawable/ic_navigate_before_white_36dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/tvAesDecodedOutput"
+            />
+
+        <Button
+            style="@style/CustomNavigationButton"
+            android:layout_width="150dp"
+            android:id="@+id/btnNavRSA"
+            android:text="RSA"
+            android:drawableRight="@drawable/ic_navigate_next_white_36dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/tvAesDecodedOutput"
+            />
+
     </RelativeLayout>
+</ScrollView>

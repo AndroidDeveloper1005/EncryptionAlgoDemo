@@ -37,4 +37,10 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <style name="CustomNavigationButton" parent="CustomButtonTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:background">@drawable/button_blue</item>
+        <item name="android:layout_marginTop">@dimen/padding_30dp</item>
+    </style>
+
 </resources>
